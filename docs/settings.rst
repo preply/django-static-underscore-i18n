@@ -3,17 +3,6 @@ Settings
 
 .. currentmodule:: django.conf.settings
 
-.. attribute:: STATICI18N_DOMAIN
-
-    :default: ``'djangojs'``
-
-    The gettext domain to use when generating static files.
-
-    Can be overrided with the ``-d/--domain`` option of ``compilejsi18n`` command.
-
-    Usually you don't want to do that, as JavaScript messages go to the
-    ``djangojs`` domain. But this might be needed if you deliver your JavaScript
-    source from Django templates.
 
 .. attribute:: STATICI18N_PACKAGES
 

@@ -1,13 +1,13 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="django-statici18n",
+    name="django-static-underscore-i18n",
     version="1.1",
-    author="Sebastien Fievet",
-    author_email="zyegfryed@gmail.com",
-    url="http://django-statici18n.readthedocs.org/",
+    author="Dmytro Voloshyn",
+    author_email="dmytro@preply.com",
+    url="http://django-static-underscore-i18n.readthedocs.org/",
     description="A Django app that provides helper for generating "
-                "Javascript catalog to static files.",
+                "Javascript Underscore templates to static files with i18n support.",
     long_description=open('README.rst').read(),
     package_dir={'': 'src'},
     packages=find_packages('src'),

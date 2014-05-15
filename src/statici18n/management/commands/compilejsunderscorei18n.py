@@ -12,6 +12,8 @@ from statici18n.conf import settings
 from statici18n.utils import get_filename
 
 import django
+from statici18n.render import js_templates
+
 if django.VERSION >= (1, 6):
     # Django >= 1.6
     from django.views.i18n import (get_javascript_catalog,
@@ -26,10 +28,7 @@ class Command(NoArgsCommand):
     option_list = NoArgsCommand.option_list + (
         make_option('--locale', '-l', dest='locale',
                     help="The locale to process. Default is to process all."),
-        make_option('-d', '--domain',
-                    dest='domain', default=settings.STATICI18N_DOMAIN,
-                    help="Override the gettext domain. By default, "
-                         " the command uses the djangojs gettext domain."),
+
         make_option('-p', '--packages', action='append', default=[],
                     dest='packages',
                     help="A list of packages to check for translations. "
@@ -42,8 +41,9 @@ class Command(NoArgsCommand):
     help = "Collect Javascript catalog files in a single location."
 
     def handle_noargs(self, **options):
+        domain = 'django_underscore'
         locale = options.get('locale')
-        domain = options['domain']
+        templates = settings.UNDERSCORE_TEMPLATES
         packages = options['packages'] or settings.STATICI18N_PACKAGES
         outputdir = options['outputdir']
         verbosity = int(options.get('verbosity'))
@@ -66,10 +66,7 @@ class Command(NoArgsCommand):
             basedir = os.path.dirname(jsfile)
             if not os.path.isdir(basedir):
                 os.makedirs(basedir)
-
-            activate(locale)
-            catalog, plural = get_javascript_catalog(locale, domain, packages)
-            response = render_javascript_catalog(catalog, plural)
+            response = js_templates(locale)
 
             with io.open(jsfile, "w", encoding="utf-8") as fp:
                 fp.write(force_text(response.content))
