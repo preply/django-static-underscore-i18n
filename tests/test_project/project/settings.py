@@ -82,7 +82,7 @@ STATIC_ROOT = os.path.realpath(os.path.join(BASE_DIR, 'static'))
 STATIC_URL = '/static/'
 STATIC_UNDERSCORE_I18N_ROOT = STATIC_ROOT
 STATIC_UNDERSCORE_I18N_OUTPUT_DIR = 'underscore_templates'
-
+STATIC_UNDERSCORE_I18N_FILENAME_FUNCTION = 'staticunderscorei18n.utils.default_filename'
 STATIC_UNDERSCORE_TEMPLATES = {
     'popup_variable': 'templates/underscore/popup.html',
 }
