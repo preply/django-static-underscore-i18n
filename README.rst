@@ -1,4 +1,4 @@
-django-static-underscorei18n
+django-static-underscore-i18n
 =================
 
 .. image:: https://travis-ci.org/cubicova17/django-static-underscore-i18n.png?branch=master

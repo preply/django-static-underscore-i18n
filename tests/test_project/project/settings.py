@@ -17,6 +17,7 @@ from os.path import normpath
 
 ROOT_DIR = normpath(os.path.dirname(os.path.realpath(__file__)) + '/../')
 
+
 def rel(*paths):
     return os.path.join(ROOT_DIR, *paths)
 # Quick-start development settings - unsuitable for production
