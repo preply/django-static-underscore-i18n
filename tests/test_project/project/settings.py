@@ -15,7 +15,7 @@ PROJECT_ROOT = os.path.normpath(os.path.dirname(__file__))
 import os
 from os.path import normpath
 
-ROOT_DIR = normpath(os.path.dirname(os.path.realpath(__file__)) + '/../')
+ROOT_DIR = normpath(os.path.dirname(os.path.realpath(__file__)) + '/')
 
 
 def rel(*paths):
@@ -81,8 +81,10 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
-TEMPLATE_LOADERS = ('django.template.loaders.filesystem.Loader', 'django.template.loaders.app_directories.Loader')
+
 TEMPLATE_DIRS = (rel('templates/'))
+TEMPLATE_LOADERS = ('django.template.loaders.filesystem.Loader', 'django.template.loaders.app_directories.Loader')
+
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
