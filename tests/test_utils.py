@@ -1,6 +1,6 @@
 import pytest
 
-from statici18n import utils
+from staticunderscorei18n import utils
 
 
 def test_default_filename_with_language():
@@ -21,7 +21,7 @@ def custom_func(locale, domain):
 
 
 def test_filename_with_custom_func(settings):
-    settings.STATICI18N_FILENAME_FUNCTION = 'test_utils.custom_func'
+    settings.STATICI_UNDERSCORE_18N_FILENAME_FUNCTION = 'test_utils.custom_func'
 
     filename = utils.get_filename('es', 'djangojs')
     assert filename == 'es-djangojs.js'

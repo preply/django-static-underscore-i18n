@@ -13,5 +13,5 @@ def pytest_configure():
 @pytest.fixture
 def cleandir(request, settings):
     def teardown():
-        shutil.rmtree(settings.STATICI18N_ROOT)
+        shutil.rmtree(settings.STATIC_UNDERSCORE_I18N_ROOT)
     request.addfinalizer(teardown)

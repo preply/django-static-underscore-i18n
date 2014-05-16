@@ -22,7 +22,6 @@ Settings
 .. attribute:: STATIC_UNDERSCORE_TEMPLATES_DOMAIN
 
     :default: ``underscore_templates``
-
     filename of generated static js file.
 
 .. attribute:: STATIC_UNDERSCORE_TEMPLATES
@@ -30,12 +29,12 @@ Settings
     :default: ``{}``
 
     Dictionary of variables/template name bindings. Example:
-  	.. code-block:: django
-	{
-		STATIC_UNDERSCORE_TEMPLATES = {
-	    	'popup_template': '_templates/popup.html',
-	}
-	.. note::
+    .. code-block:: django
+    {
+        STATIC_UNDERSCORE_TEMPLATES = {
+        'popup_template': '_templates/popup.html',
+    }
+    .. note::
 
 
 .. attribute:: STATIC_UNDERSCORE_I18N_ROOT
