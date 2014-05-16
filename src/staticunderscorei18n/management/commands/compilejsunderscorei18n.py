@@ -9,6 +9,7 @@ from staticunderscorei18n.conf import settings
 from staticunderscorei18n.utils import get_filename
 from staticunderscorei18n.render import js_templates
 
+
 class Command(NoArgsCommand):
     option_list = NoArgsCommand.option_list + (
         make_option('--locale', '-l', dest='locale',
@@ -18,7 +19,6 @@ class Command(NoArgsCommand):
                          "Defaults to static/jsunderscorei18n.")
     )
     help = "Collect Javascript catalog files in a single location."
-
 
     def handle_noargs(self, **options):
         domain = settings.UNDERSCORE_TEMPLATES_DOMAIN
