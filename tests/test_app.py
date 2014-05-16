@@ -18,7 +18,7 @@ def test_compile_all(settings):
     assert os.path.exists(os.path.join(
         settings.STATIC_ROOT, "jsunderscorei18n", "en", "underscore_templates.js"))
     filename = os.path.join(
-        settings.STATICI_UNDERSCORE_18N_ROOT, "jsunderscorei18n", "fr", "underscore_templates.js")
+        settings.STATIC_UNDERSCORE_I18N_ROOT, "jsunderscorei18n", "fr", "underscore_templates.js")
     assert os.path.exists(filename)
     with io.open(filename, "r", encoding="utf-8") as fp:
         content = fp.read()
