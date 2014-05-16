@@ -1,17 +1,12 @@
 from __future__ import with_statement
-
 import io
 import os
 from optparse import make_option
-
 from django.core.management.base import NoArgsCommand
-from django.utils.translation import to_locale, activate
+from django.utils.translation import to_locale
 from django.utils.encoding import force_text
-
 from staticunderscorei18n.conf import settings
 from staticunderscorei18n.utils import get_filename
-
-import django
 from staticunderscorei18n.render import js_templates
 
 class Command(NoArgsCommand):
@@ -23,6 +18,7 @@ class Command(NoArgsCommand):
                          "Defaults to static/jsunderscorei18n.")
     )
     help = "Collect Javascript catalog files in a single location."
+
 
     def handle_noargs(self, **options):
         domain = settings.UNDERSCORE_TEMPLATES_DOMAIN

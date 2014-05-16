@@ -44,13 +44,11 @@ and you want to render it in something like Backbone::
 
 to do this you need to compile your .html template to be available in js with ``popup_variable_name``. Moreover if you have multiple templates, you can bundle them int single js file and serve it via CDN or nginx ommiting django.
 
-With ``django-static-underscore-i18n`` you can do this by following:
-Declare dictionary mapping between html files and js variable names:
-``
-STATIC_UNDERSCORE_TEMPLATES = {'popup_variable_name': 'templates/underscore/popup.html', ... , }
-``
+With ``django-static-underscore-i18n`` you can do this by following. Declare dictionary mapping between html files and js variable names::
 
-and run  ``python manage.py compilejsunderscorei18n`` which will bundle your html templates into one js file for each locale supporting i18 {% trans %} tags.
+STATIC_UNDERSCORE_TEMPLATES = {'popup_variable_name': 'templates/underscore/popup.html', ... , }
+
+and run  ``python manage.py compilejsunderscorei18n`` which will bundle your html templates into one js file for each locale supporting i18 ``{% trans %}`` tags.
 
 .. _javascript_catalog view: https://docs.djangoproject.com/en/1.6/topics/i18n/translation/#module-django.views.i18n
 .. _adding an overhead: https://docs.djangoproject.com/en/1.6/topics/i18n/translation/#note-on-performance
