@@ -21,8 +21,8 @@ class Command(NoArgsCommand):
     help = "Collect Javascript catalog files in a single location."
 
     def handle_noargs(self, **options):
-        domain = settings.UNDERSCORE_TEMPLATES_DOMAIN
-        templates = settings.UNDERSCORE_TEMPLATES
+        domain = settings.STATIC_UNDERSCORE_TEMPLATES_DOMAIN
+        templates = settings.STATIC_UNDERSCORE_TEMPLATES_DOMAIN
         locale = options.get('locale')
         outputdir = options['outputdir']
         verbosity = int(options.get('verbosity'))
