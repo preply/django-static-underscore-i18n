@@ -75,9 +75,16 @@ USE_L10N = True
 
 USE_TZ = True
 
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    #    'compressor.finders.CompressorFinder',
+    )
+
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
+
 STATIC_ROOT = os.path.realpath(os.path.join(BASE_DIR, 'static'))
 STATIC_URL = '/static/'
 STATIC_UNDERSCORE_I18N_ROOT = STATIC_ROOT
