@@ -12,6 +12,14 @@ import os
 BASE_DIR = os.path.normpath(os.path.join(os.path.dirname(__file__), os.pardir))
 PROJECT_ROOT = os.path.normpath(os.path.dirname(__file__))
 
+import os
+from os.path import normpath
+
+ROOT_DIR = normpath(os.path.dirname(os.path.realpath(__file__)) + '/../')
+
+def rel(*paths):
+    return os.path.join(ROOT_DIR, *paths)
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.6/howto/deployment/checklist/
