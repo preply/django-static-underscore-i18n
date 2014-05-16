@@ -2,18 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="90dbbd63-5a6b-404c-a7e2-fa0851c3c9c0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/statici18n/render.py" />
       <change type="NEW" beforePath="" afterPath="$USER_HOME$/apollo/media/css/jquery-ui.css" />
       <change type="NEW" beforePath="" afterPath="$USER_HOME$/apollo/templates/includes/inline/no_results_search.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/statici18n/compat.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/statici18n/templatetags/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/statici18n/templatetags/statici18n.py" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/statici18n/management/commands/compilejsi18n.py" afterPath="$PROJECT_DIR$/src/statici18n/management/commands/compilejsunderscorei18n.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/faq.rst" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/templatetags.rst" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/troubleshooting.rst" afterPath="" />
       <change type="MODIFICATION" beforePath="$USER_HOME$/apollo/media/images/recycled/victor.png" afterPath="$USER_HOME$/apollo/media/images/recycled/victor.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/changelog.rst" afterPath="$PROJECT_DIR$/docs/changelog.rst" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/commands.rst" afterPath="$PROJECT_DIR$/docs/commands.rst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/settings.rst" afterPath="$PROJECT_DIR$/docs/settings.rst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/setup.py" afterPath="$PROJECT_DIR$/setup.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/statici18n/conf.py" afterPath="$PROJECT_DIR$/src/statici18n/conf.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/conf.py" afterPath="$PROJECT_DIR$/docs/conf.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index.rst" afterPath="$PROJECT_DIR$/docs/index.rst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/statici18n/management/commands/compilejsunderscorei18n.py" afterPath="$PROJECT_DIR$/src/statici18n/management/commands/compilejsunderscorei18n.py" />
       <change type="MODIFICATION" beforePath="$USER_HOME$/apollo/api/public_resources.py" afterPath="$USER_HOME$/apollo/api/public_resources.py" />
       <change type="MODIFICATION" beforePath="$USER_HOME$/apollo/apollo/settings.py" afterPath="$USER_HOME$/apollo/apollo/settings.py" />
       <change type="MODIFICATION" beforePath="$USER_HOME$/apollo/apollo/settings_prod.py" afterPath="$USER_HOME$/apollo/apollo/settings_prod.py" />
@@ -67,58 +66,58 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="settings.py" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$USER_HOME$/apollo/apollo/settings.py">
+      <file leaf-file-name="index.rst" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/index.rst">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="555" column="0" selection-start="20327" selection-end="20327" vertical-scroll-proportion="0.75342464">
+            <state line="10" column="6" selection-start="107" selection-end="107" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/apollo/templates/main.html">
+      <file leaf-file-name="make.bat" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/make.bat">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="155" column="60" selection-start="7386" selection-end="7386" vertical-scroll-proportion="-96.875">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="extra_tags.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/apollo/tutors/templatetags/extra_tags.py">
+      <file leaf-file-name="Makefile" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/Makefile">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="164" column="18" selection-start="5265" selection-end="5279" vertical-scroll-proportion="-5.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="education_tmpl.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/apollo/templates/_templates/education_tmpl.html">
+      <file leaf-file-name="settings.rst" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/docs/settings.rst">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="46" selection-start="1328" selection-end="1343" vertical-scroll-proportion="-5.0833335">
+            <state line="11" column="0" selection-start="182" selection-end="182" vertical-scroll-proportion="-0.88461536">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="render.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/statici18n/render.py">
+      <file leaf-file-name="conf.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/conf.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="22" selection-start="394" selection-end="394" vertical-scroll-proportion="0.0">
+            <state line="60" column="14" selection-start="2006" selection-end="2006" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="compilejsunderscorei18n.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/statici18n/management/commands/compilejsunderscorei18n.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="37" column="53" selection-start="1265" selection-end="1292" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="e#0#35#0" expanded="true" />
+                <element signature="e#0#37#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="utils.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/statici18n/utils.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="32" selection-start="514" selection-end="514" vertical-scroll-proportion="0.0">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -158,19 +157,19 @@
     </FindUsagesManager>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$USER_HOME$/apollo" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/setup.py" />
-        <option value="$PROJECT_DIR$/docs/settings.rst" />
-        <option value="$PROJECT_DIR$/docs/commands.rst" />
-        <option value="$PROJECT_DIR$/src/statici18n/conf.py" />
-        <option value="$PROJECT_DIR$/src/statici18n/management/commands/compilejsi18n.py" />
         <option value="$PROJECT_DIR$/src/statici18n/render.py" />
         <option value="$USER_HOME$/apollo/templates/main.html" />
+        <option value="$PROJECT_DIR$/src/statici18n/management/commands/compilejsunderscorei18n.py" />
         <option value="$USER_HOME$/apollo/apollo/settings.py" />
+        <option value="$PROJECT_DIR$/docs/changelog.rst" />
+        <option value="$PROJECT_DIR$/docs/commands.rst" />
+        <option value="$PROJECT_DIR$/docs/conf.py" />
+        <option value="$PROJECT_DIR$/docs/index.rst" />
       </list>
     </option>
   </component>
@@ -275,6 +274,96 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="django-static-underscore-i18n" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="django-static-underscore-i18n" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="django-static-underscore-i18n" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="django-static-underscore-i18n" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="statici18n" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="django-static-underscore-i18n" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="django-static-underscore-i18n" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="statici18n" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="management" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="django-static-underscore-i18n" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="django-static-underscore-i18n" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="statici18n" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="management" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="commands" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="django-static-underscore-i18n" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="django-static-underscore-i18n" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="docs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -283,6 +372,22 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
   <component name="RunManager">
+    <configuration default="true" type="docs" factoryName="Docutils task">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <module name="django-static-underscore-i18n" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="docutils_input_file" value="" />
+      <option name="docutils_output_file" value="" />
+      <option name="docutils_params" value="" />
+      <option name="docutils_task" value="" />
+      <option name="docutils_open_in_browser" value="false" />
+      <method />
+    </configuration>
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -424,62 +529,44 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/apollo/templates/_templates/education_tmpl.html">
+    <entry file="file://$PROJECT_DIR$/docs/commands.rst">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="46" selection-start="1328" selection-end="1343" vertical-scroll-proportion="-5.0833335">
+        <state line="25" column="41" selection-start="736" selection-end="736" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/apollo/tutors/templatetags/extra_tags.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="164" column="18" selection-start="5265" selection-end="5279" vertical-scroll-proportion="-5.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/statici18n/management/commands/__init__.py">
+    <entry file="file://$PROJECT_DIR$/docs/Makefile">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/statici18n/conf.py">
+    <entry file="file://$PROJECT_DIR$/src/statici18n/management/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="21" selection-start="499" selection-end="516" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/templatetags/i18n.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="245" column="4" selection-start="8431" selection-end="8431" vertical-scroll-proportion="0.102564104">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/apollo/templates/main.html">
+    <entry file="file://$PROJECT_DIR$/docs/conf.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="155" column="60" selection-start="7386" selection-end="7386" vertical-scroll-proportion="-96.875">
+        <state line="60" column="14" selection-start="2006" selection-end="2006" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/statici18n/render.py">
+    <entry file="file://$PROJECT_DIR$/docs/index.rst">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="22" selection-start="394" selection-end="394" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
+        <state line="10" column="6" selection-start="107" selection-end="107" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/apollo/apollo/settings.py">
+    <entry file="file://$PROJECT_DIR$/docs/settings.rst">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="555" column="0" selection-start="20327" selection-end="20327" vertical-scroll-proportion="0.75342464">
+        <state line="11" column="0" selection-start="182" selection-end="182" vertical-scroll-proportion="-0.88461536">
           <folding />
         </state>
       </provider>

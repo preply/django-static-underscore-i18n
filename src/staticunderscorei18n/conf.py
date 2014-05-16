@@ -11,6 +11,6 @@ class StaticFilesConf(AppConf):
     ROOT = settings.STATIC_ROOT
     # Controls the directory inside STATICI18N_ROOT
     # that generated files will be written to.
-    OUTPUT_DIR = 'js-underscore-i18n'
+    OUTPUT_DIR = 'jsunderscorei18n'
     # The dotted path to the function that creates the filename
-    FILENAME_FUNCTION = 'statici18n.utils.default_filename'
+    FILENAME_FUNCTION = 'staticunderscorei18n.utils.default_filename'

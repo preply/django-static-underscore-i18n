@@ -7,8 +7,5 @@ Contents
    :maxdepth: 2
 
    commands
-   templatetags
    settings
-   troubleshooting
-   faq
    changelog

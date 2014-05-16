@@ -2,7 +2,7 @@ import os
 
 from django.utils.importlib import import_module
 
-from statici18n.conf import settings
+from staticunderscorei18n.conf import settings
 
 
 def get_mod_func(callback):
@@ -20,11 +20,11 @@ def get_mod_func(callback):
 def get_filename(*args, **kwargs):
     try:
         mod_name, func_name = get_mod_func(
-            settings.STATICI18N_FILENAME_FUNCTION)
+            settings.STATIC_UNDERSCORE_I18N_FILENAME_FUNCTION)
         _filename_func = getattr(import_module(mod_name), func_name)
     except (AttributeError, ImportError) as e:
         raise ImportError("Couldn't import filename function %s: %s" %
-                          (settings.STATICI18N_FILENAME_FUNCTION, e))
+                          (settings.STATIC_UNDERSCORE_I18N_FILENAME_FUNCTION, e))
     return _filename_func(*args, **kwargs)
 
 

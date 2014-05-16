@@ -4,13 +4,13 @@ Settings
 .. currentmodule:: django.conf.settings
 
 
-.. attribute:: STATICI18N_PACKAGES
+.. attribute:: STATICI_UNDERSCORE_18N_PACKAGES
 
     :default: ``('django.conf')``
 
     A list of packages to check for translations.
 
-    Can be overrided with the ``-p/--package`` option of :ref:`compilejsi18n`
+    Can be overrided with the ``-p/--package`` option of :ref:`compilejsunderscorei18n`
     command.
 
     Each string in packages should be in Python dotted-package syntax (the
@@ -19,22 +19,41 @@ Settings
     packages, all those catalogs are merged into one catalog. This is useful
     if you have JavaScript that uses strings from different applications.
 
-.. attribute:: STATICI18N_ROOT
+.. attribute:: STATIC_UNDERSCORE_TEMPLATES_DOMAIN
+
+    :default: ``underscore_templates``
+
+    filename of generated static js file.
+
+.. attribute:: STATIC_UNDERSCORE_TEMPLATES
+
+    :default: ``{}``
+
+    Dictionary of variables/template name bindings. Example:
+  	.. code-block:: django
+	{
+		STATIC_UNDERSCORE_TEMPLATES = {
+	    	'popup_template': '_templates/popup.html',
+	}
+	.. note::
+
+
+.. attribute:: STATIC_UNDERSCORE_I18N_ROOT
 
     :default: ``STATIC_ROOT``
 
     Controls the file path that catalog files will be written into.
 
-.. attribute:: STATICI18N_OUTPUT_DIR
+.. attribute:: STATICI_UNDERSCORE_I18N_OUTPUT_DIR
 
-    :Default: ``'jsi18n'``
+    :Default: ``'underscore_templates'``
 
-    Controls the directory inside :attr:`STATICI18N_ROOT` that generated files
+    Controls the directory inside :attr:`STATIC_UNDERSCORE_I18N_ROOT` that generated files
     will be written into.
 
-.. attribute:: STATICI18N_FILENAME_FUNCTION
+.. attribute:: STATIC_UNDERSCORE_I18N_FILENAME_FUNCTION
 
-    :default: ``'statici18n.utils.default_filename'``
+    :default: ``'staticunderscorei18n.utils.default_filename'``
 
     The dotted path to the function that creates the filename.
 
@@ -47,8 +66,8 @@ Settings
 
     By default, the function returns the path ``'<language_code>/<domain>.js'``.
 
-    The final filename is resulted by joining :attr:`STATICI18N_ROOT`,
-    :attr:`STATICI18N_OUTPUT_DIR` and :attr:`STATICI18N_FILENAME_FUNCTION`.
+    The final filename is resulted by joining :attr:`STATIC_UNDERSCORE_I18N_ROOT`,
+    :attr:`STATIC_UNDERSCORE_I18N_OUTPUT_DIR` and :attr:`STATIC_UNDERSCORE_I18N_FILENAME_FUNCTION`.
 
     For example, with default settings in place and ``STATIC_ROOT = 'static'``, the JavaScript catalog
-    generated for the ``en_GB`` locale is: ``'static/jsi18n/en-gb/djangojs.js'``
+    generated for the ``en_GB`` locale is: ``'static/jsunderscorei18n/en-gb/underscore_templates.js'``

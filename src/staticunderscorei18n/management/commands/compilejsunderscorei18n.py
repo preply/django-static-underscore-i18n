@@ -8,32 +8,16 @@ from django.core.management.base import NoArgsCommand
 from django.utils.translation import to_locale, activate
 from django.utils.encoding import force_text
 
-from statici18n.conf import settings
-from statici18n.utils import get_filename
+from staticunderscorei18n.conf import settings
+from staticunderscorei18n.utils import get_filename
 
 import django
-from statici18n.render import js_templates
-
-if django.VERSION >= (1, 6):
-    # Django >= 1.6
-    from django.views.i18n import (get_javascript_catalog,
-                                   render_javascript_catalog)
-else:
-    # Django <= 1.5
-    from statici18n.compat import (get_javascript_catalog,
-                                   render_javascript_catalog)
-
+from staticunderscorei18n.render import js_templates
 
 class Command(NoArgsCommand):
     option_list = NoArgsCommand.option_list + (
         make_option('--locale', '-l', dest='locale',
                     help="The locale to process. Default is to process all."),
-
-        make_option('-p', '--packages', action='append', default=[],
-                    dest='packages',
-                    help="A list of packages to check for translations. "
-                         "Default is 'django.conf'. Use multiple times to "
-                         "add more."),
         make_option('-o', '--output', dest='outputdir', metavar='OUTPUT_DIR',
                     help="Output directory to store generated catalogs. "
                          "Defaults to static/jsi18n.")
@@ -41,10 +25,9 @@ class Command(NoArgsCommand):
     help = "Collect Javascript catalog files in a single location."
 
     def handle_noargs(self, **options):
-        domain = 'django_underscore'
-        locale = options.get('locale')
+        domain = settings.UNDERSCORE_TEMPLATES_DOMAIN
         templates = settings.UNDERSCORE_TEMPLATES
-        packages = options['packages'] or settings.STATICI18N_PACKAGES
+        locale = options.get('locale')
         outputdir = options['outputdir']
         verbosity = int(options.get('verbosity'))
 
@@ -55,8 +38,8 @@ class Command(NoArgsCommand):
                          for (lang_code, lang_name) in settings.LANGUAGES]
 
         if outputdir is None:
-            outputdir = os.path.join(settings.STATICI18N_ROOT,
-                                     settings.STATICI18N_OUTPUT_DIR)
+            outputdir = os.path.join(settings.STATIC_UNDERSCORE_I18N_ROOT,
+                                     settings.STATIC_UNDERSCORE_I18N_OUTPUT_DIR)
 
         for locale in languages:
             if verbosity > 0:
@@ -66,7 +49,7 @@ class Command(NoArgsCommand):
             basedir = os.path.dirname(jsfile)
             if not os.path.isdir(basedir):
                 os.makedirs(basedir)
-            response = js_templates(locale)
+            response = js_templates(locale, templates)
 
             with io.open(jsfile, "w", encoding="utf-8") as fp:
                 fp.write(force_text(response.content))
