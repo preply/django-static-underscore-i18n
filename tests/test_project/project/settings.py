@@ -19,8 +19,6 @@ ROOT_DIR = normpath(os.path.dirname(os.path.realpath(__file__)) + '/../')
 
 def rel(*paths):
     return os.path.join(ROOT_DIR, *paths)
-
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.6/howto/deployment/checklist/
 
@@ -82,7 +80,7 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
-TEMPLATE_LOADERS = ('django.template.loaders.filesystem.Loader','django.template.loaders.app_directories.Loader')
+TEMPLATE_LOADERS = ('django.template.loaders.filesystem.Loader', 'django.template.loaders.app_directories.Loader')
 TEMPLATE_DIRS = (rel('templates/'))
 
 # Static files (CSS, JavaScript, Images)
