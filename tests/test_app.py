@@ -3,7 +3,6 @@ import os
 import pytest
 
 from django.core import management
-from django.template import loader, Context
 from django.utils import six
 
 
