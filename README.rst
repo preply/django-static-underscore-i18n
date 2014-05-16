@@ -83,6 +83,13 @@ Installation
       'django.core.context_processors.i18n',
     )
 
+and you should have ``FileSystemFinder`` and ``AppDirectoriesFinder`` to be available::
+
+    STATICFILES_FINDERS = (
+        'django.contrib.staticfiles.finders.FileSystemFinder',
+        'django.contrib.staticfiles.finders.AppDirectoriesFinder',     
+        )
+
 5. Edit your template(s) and insert .js files those were compiled. Good practice is to serve static files without django server (you can you nginx for that):
 
  .. code-block:: html+django
