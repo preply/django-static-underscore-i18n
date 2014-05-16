@@ -22,7 +22,7 @@ class Command(NoArgsCommand):
 
     def handle_noargs(self, **options):
         domain = settings.STATIC_UNDERSCORE_TEMPLATES_DOMAIN
-        templates = settings.STATIC_UNDERSCORE_TEMPLATES_DOMAIN
+        templates = settings.STATIC_UNDERSCORE_TEMPLATES
         locale = options.get('locale')
         outputdir = options['outputdir']
         verbosity = int(options.get('verbosity'))
