@@ -81,7 +81,7 @@ USE_TZ = True
 STATIC_ROOT = os.path.realpath(os.path.join(BASE_DIR, 'static'))
 STATIC_URL = '/static/'
 STATIC_UNDERSCORE_I18N_ROOT = STATIC_ROOT
-STATICI_UNDERSCORE_I18N_OUTPUT_DIR = 'underscore_templates'
+STATIC_UNDERSCORE_I18N_OUTPUT_DIR = 'underscore_templates'
 
 STATIC_UNDERSCORE_TEMPLATES = {
     'popup_variable': 'templates/underscore/popup.html',
