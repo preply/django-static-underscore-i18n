@@ -17,14 +17,14 @@ def test_compile_all(settings):
     assert lines[0] == "processing language en"
     assert lines[1] == "processing language fr"
     assert os.path.exists(os.path.join(
-        settings.STATIC_ROOT, "jsi18n", "en", "djangojs.js"))
+        settings.STATIC_ROOT, "jsunderscorei18n", "en", "underscore_templates.js"))
     filename = os.path.join(
-        settings.STATICI_UNDERSCORE_18N_ROOT, "jsi18n", "fr", "djangojs.js")
+        settings.STATICI_UNDERSCORE_18N_ROOT, "jsunderscorei18n", "fr", "underscore_templates.js")
     assert os.path.exists(filename)
     with io.open(filename, "r", encoding="utf-8") as fp:
         content = fp.read()
-        assert "django.catalog" in content
-        assert '"Hello world!": "Bonjour \\u00e0 tous !"' in content
+        assert "popup_varable" in content
+        # assert '"Hello world!": "Bonjour \\u00e0 tous !"' in content
 
 
 @pytest.mark.usefixtures("cleandir")

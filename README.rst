@@ -15,35 +15,32 @@ This repo an project is forked from ``django-statici18n``
 `github.com/zyegfryed/django-statici18n`_ to tackle the problem of compiling of Underscore templates to single static js file.
 The original code was generating static js files for translations.
 
-This app is intended to make life easier when you want to work with your Underscore templates and translate them with Django default i18n module (no js ``gettext``). If you are using Underscore templates you can have project directory like :
+This app is intended to make life easier when you want to work with your Underscore templates and translate them with Django default i18n module (no js ``gettext``). If you are using Underscore templates you can have project directory like::
 
-<project_directory>/
-   ...
-   locale/
-   +- en/
-   +- fr/
-   templates/
-   +- underscore/
-      |
-      +- popup.html
-   +- modals/
-   +- include/
-   +- main.html
+   <project_directory>/
+       ...
+       locale/
+       +- en/
+       +- fr/
+       templates/
+       +- underscore/
+          |
+          +- popup.html
+       +- modals/
+       +- include/
+       +- main.html
 
-and your ``popup.html`` can look like
+and your ``popup.html`` can look like::
 
-``
      <div>
          {% trans "Hello" %} <% username %>
      </div>
-``
 
-and you want to render it in something like Backbone:
-``
+and you want to render it in something like Backbone::
+
     PopupView = Backbone.View.extend({
         template: _.template(popup_variable_name),
     });
-``
 
 to do this you need to compile your .html template to be available in js with ``popup_variable_name``. Moreover if you have multiple templates, you can bundle them int single js file and serve it via CDN or nginx ommiting django.
 

@@ -20,7 +20,7 @@ class Command(NoArgsCommand):
                     help="The locale to process. Default is to process all."),
         make_option('-o', '--output', dest='outputdir', metavar='OUTPUT_DIR',
                     help="Output directory to store generated catalogs. "
-                         "Defaults to static/jsi18n.")
+                         "Defaults to static/jsunderscorei18n.")
     )
     help = "Collect Javascript catalog files in a single location."
 

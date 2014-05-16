@@ -16,10 +16,10 @@ test:
 	@py.test -q tests || exit 1
 
 lint:
-	@flake8 src/statici18n tests
+	@flake8 src/staticunderscorei18n tests
 
 coverage:
-	@py.test -q tests --cov=src/statici18n --cov-report=html || exit 1
+	@py.test -q tests --cov=src/staticunderscorei18n --cov-report=html || exit 1
 
 clean:
 	@rm -fr build dist
