@@ -46,7 +46,7 @@ to do this you need to compile your .html template to be available in js with ``
 
 With ``django-static-underscore-i18n`` you can do this by following. Declare dictionary mapping between html files and js variable names::
 
-    STATIC_UNDERSCORE_TEMPLATES = {'popup_variable_name': 'templates/underscore/popup.html', ... , }
+    STATIC_UNDERSCORE_TEMPLATES = {'popup_variable_name': 'underscore/popup.html', ... , }
 
 and run  ``python manage.py compilejsunderscorei18n`` which will bundle your html templates into one js file for each locale supporting i18 ``{% trans %}`` tags.
 
