@@ -6,7 +6,7 @@ from django.utils.html import escapejs
 from django.utils.translation import activate
 
 
-def js_templates(templates, language):
+def js_templates(language, templates):
     compiled_js = ""
     request = HttpRequest()
     context = RequestContext(request, {})
