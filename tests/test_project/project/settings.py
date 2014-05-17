@@ -89,11 +89,9 @@ TEMPLATE_LOADERS = ('django.template.loaders.filesystem.Loader', 'django.templat
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 STATIC_ROOT = os.path.realpath(os.path.join(BASE_DIR, 'static'))
 STATIC_URL = '/static/'
-
 STATIC_UNDERSCORE_I18N_ROOT = STATIC_ROOT
 STATIC_UNDERSCORE_I18N_OUTPUT_DIR = 'jsunderscorei18n'
 STATIC_UNDERSCORE_I18N_FILENAME_FUNCTION = 'staticunderscorei18n.utils.default_filename'
-
 STATIC_UNDERSCORE_TEMPLATES = {
     'popup_variable': 'underscore/popup.html',
 }

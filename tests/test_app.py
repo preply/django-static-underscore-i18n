@@ -26,6 +26,7 @@ def test_compile_all(settings):
         assert 'Bonjour' in content
         assert 'username' in content
 
+
 @pytest.mark.usefixtures("cleandir")
 def test_compile_locale_not_exists(settings):
     out = six.StringIO()
