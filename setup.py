@@ -2,10 +2,10 @@ from setuptools import setup, find_packages
 
 setup(
     name="django-static-underscore-i18n",
-    version="1.9",
+    version="1.9.1",
     author="Dmytro Voloshyn",
     author_email="dmytro@preply.com",
-    url="https://github.com/cubicova17/django-static-underscore-i18n",
+    url="http://django-static-underscore-i18n.readthedocs.org/",
   	download_url = 'https://github.com/cubicova17/django-static-underscore-i18n/tarball/1.9',
     description="A Django app that provides helper for generating "
                 "Javascript Underscore templates to static files with i18n support.",
