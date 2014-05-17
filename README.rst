@@ -57,10 +57,10 @@ and run  ``python manage.py compilejsunderscorei18n`` which will bundle your htm
 Installation
 ------------
 
-1. Use your favorite Python packaging tool to install ``django-staticunderscorei18n``
+1. Use your favorite Python packaging tool to install ``django-staticunderscore-i18n``
    from `PyPI`_, e.g.::
 
-    pip install django-staticunderscorei18n
+    pip install django-static-underscore-i18n
 
 2. Add ``'staticunderscorei18n'`` to your ``INSTALLED_APPS`` setting::
 
@@ -102,7 +102,7 @@ and you should have ``FileSystemFinder`` and ``AppDirectoriesFinder`` to be avai
     You can modify the output path and more options by tweaking
     ``django-staticunderscorei18n`` settings.
 
-.. _PyPI: http://pypi.python.org/pypi/django-staticunderscorei18n
+.. _PyPI: http://pypi.python.org/pypi/django-static-underscore-i18n
 .. _translated: https://docs.djangoproject.com/en/1.6/topics/i18n/translation/#message-files
 .. _compiled: https://docs.djangoproject.com/en/1.6/topics/i18n/translation/#compiling-message-files
 
