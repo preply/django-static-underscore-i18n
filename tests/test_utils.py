@@ -21,14 +21,14 @@ def custom_func(locale, domain):
 
 
 def test_filename_with_custom_func(settings):
-    settings.STATICI_UNDERSCORE_18N_FILENAME_FUNCTION = 'test_utils.custom_func'
+    settings.STATIC_UNDERSCORE_I18N_FILENAME_FUNCTION = 'test_utils.custom_func'
 
     filename = utils.get_filename('es', 'djangojs')
     assert filename == 'es-djangojs.js'
 
 
 def test_filename_with_no_func(settings):
-    settings.STATICI18N_FILENAME_FUNCTION = 'no_func'
+    settings.STATIC_UNDERSCORE_I18N_FILENAME_FUNCTION = 'no_func'
 
     with pytest.raises(ImportError):
         utils.get_filename('es', 'djangojs')

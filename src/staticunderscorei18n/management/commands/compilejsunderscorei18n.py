@@ -46,6 +46,5 @@ class Command(NoArgsCommand):
             if not os.path.isdir(basedir):
                 os.makedirs(basedir)
             response = js_templates(locale, templates)
-
             with io.open(jsfile, "w", encoding="utf-8") as fp:
                 fp.write(force_text(response.content))

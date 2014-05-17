@@ -8,10 +8,12 @@ from django.utils.translation import activate
 
 def js_templates(language, templates):
     compiled_js = ""
-    request = HttpRequest()
-    context = RequestContext(request, {})
     activate(language)
+    request = HttpRequest()
+    request.LANGUAGE_CODE = language
+    context = RequestContext(request, {'LANGUAGE_CODE': language})
     for (name, template) in templates.iteritems():
-        text = loader.get_template(template_name=template).render(context)
+        template = loader.get_template(template_name=template)
+        text = template.render(context)
         compiled_js += "var %s = '%s';\r\n" % (name, escapejs(text))
     return http.HttpResponse(compiled_js, 'text/javascript')

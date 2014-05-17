@@ -22,9 +22,9 @@ def test_compile_all(settings):
     assert os.path.exists(filename)
     with io.open(filename, "r", encoding="utf-8") as fp:
         content = fp.read()
-        assert "popup_varable" in content
-        # assert '"Hello world!": "Bonjour \\u00e0 tous !"' in content
-
+        assert "popup_variable" in content
+        assert 'Bonjour' in content
+        assert 'username' in content
 
 @pytest.mark.usefixtures("cleandir")
 def test_compile_locale_not_exists(settings):
