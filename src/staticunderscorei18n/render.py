@@ -7,7 +7,7 @@ from django.utils.translation import activate
 
 
 def js_templates(language, templates):
-    compiled_js = ""
+    compiled_js = "var underscore_vars={};"
     activate(language)
     request = HttpRequest()
     request.LANGUAGE_CODE = language
