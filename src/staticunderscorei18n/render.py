@@ -15,5 +15,5 @@ def js_templates(language, templates):
     for (name, template) in templates.iteritems():
         template = loader.get_template(template_name=template)
         text = template.render(context)
-        compiled_js += "var %s = '%s';\r\n" % (name, escapejs(text))
+        compiled_js += "underscore_vars['%s'] = '%s';\r\n" % (name, escapejs(text))
     return http.HttpResponse(compiled_js, 'text/javascript')
