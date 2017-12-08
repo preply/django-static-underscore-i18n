@@ -81,7 +81,7 @@ USE_L10N = True
 
 USE_TZ = True
 
-TEMPLATE_DIRS = (rel('templates/'))
+TEMPLATE_DIRS = (rel('templates/'), )
 TEMPLATE_LOADERS = ('django.template.loaders.filesystem.Loader', 'django.template.loaders.app_directories.Loader')
 
 
