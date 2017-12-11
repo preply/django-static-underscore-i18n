@@ -39,6 +39,8 @@ def rel(*paths):
 INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'staticunderscorei18n',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
 )
 
 MIDDLEWARE_CLASSES = (
