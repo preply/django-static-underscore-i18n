@@ -1,6 +1,8 @@
 from __future__ import with_statement
+
 import io
 import os
+
 import django
 from django.core.management.base import BaseCommand
 from django.utils.translation import to_locale
@@ -11,6 +13,9 @@ from staticunderscorei18n.render import js_templates
 
 
 class Command(BaseCommand):
+    help = "Collect Javascript catalog files in a single location."
+    requires_system_checks = False
+
     def add_argument(self, parser):
         parser.add_argument('--locale', '-l', dest='locale',
                             help="The locale to process. Default is to process all."),
@@ -18,14 +23,11 @@ class Command(BaseCommand):
                             help="Output directory to store generated catalogs. "
                                  "Defaults to static/jsunderscorei18n.")
 
-    help = "Collect Javascript catalog files in a single location."
-    requires_system_checks = False
-
     def handle(self, **options):
         domain = settings.STATIC_UNDERSCORE_TEMPLATES_DOMAIN
         templates = settings.STATIC_UNDERSCORE_TEMPLATES
         locale = options.get('locale')
-        outputdir = options['outputdir']
+        outputdir = options.get('outputdir')
         verbosity = int(options.get('verbosity'))
 
         if locale is not None:

@@ -9,7 +9,9 @@ from django.utils import six
 @pytest.mark.usefixtures("cleandir")
 def test_compile_all(settings):
     out = six.StringIO()
-    management.call_command('compilejsunderscorei18n', verbosity=1, stdout=out)
+    management.call_command('compilejsunderscorei18n',
+                            verbosity=1,
+                            stdout=out)
     out.seek(0)
     lines = [l.strip() for l in out.readlines()]
     assert len(lines) == 2
@@ -30,5 +32,8 @@ def test_compile_all(settings):
 @pytest.mark.usefixtures("cleandir")
 def test_compile_locale_not_exists():
     out = six.StringIO()
-    management.call_command('compilejsunderscorei18n', locale='ar', verbosity=1, stderr=out)
+    management.call_command('compilejsunderscorei18n',
+                            locale='ar',
+                            verbosity=1,
+                            stderr=out)
     assert out.getvalue() == ""

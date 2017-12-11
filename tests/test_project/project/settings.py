@@ -25,7 +25,7 @@ TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = []
 
-from os.path import normpath
+from os.path import normpath  # noqa
 
 ROOT_DIR = normpath(os.path.dirname(os.path.realpath(__file__)) + '/')
 
@@ -34,6 +34,7 @@ def rel(*paths):
     return os.path.join(ROOT_DIR, *paths)
 
 # Application definition
+
 
 INSTALLED_APPS = (
     'django.contrib.staticfiles',
