@@ -1,6 +1,6 @@
 language: python
 python:
-  - "2.7"
+  - "2.7.13"
 env:
   - DJANGO_VERSION=1.8.18
   - DJANGO_VERSION=1.9.13
@@ -8,13 +8,15 @@ env:
   - DJANGO_VERSION=1.11.8
 install:
   - pip install -q Django==${DJANGO_VERSION}
-  - pip install -q -e . -r requirements-test.txt
+  - pip install -q -r requirements-test.txt
+  - pip install -q -e .
   - pip install coveralls
 before_script:
   - make lint
 script:
   - export PYTHONPATH=$PYTHONPATH:$(pwd)/tests/test_project
   - export DJANGO_SETTINGS_MODULE=project.settings
-  - make coverage
+  - make test
 after_success:
+  - make coverage
   - coveralls

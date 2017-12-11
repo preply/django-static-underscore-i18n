@@ -28,7 +28,7 @@ def test_compile_all(settings):
 
 
 @pytest.mark.usefixtures("cleandir")
-def test_compile_locale_not_exists(settings):
+def test_compile_locale_not_exists():
     out = six.StringIO()
     management.call_command('compilejsunderscorei18n', locale='ar', verbosity=1, stderr=out)
     assert out.getvalue() == ""

@@ -1,8 +1,8 @@
 from __future__ import with_statement
 import io
 import os
-from optparse import make_option
-from django.core.management.base import NoArgsCommand
+import django
+from django.core.management.base import BaseCommand
 from django.utils.translation import to_locale
 from django.utils.encoding import force_text
 from staticunderscorei18n.conf import settings
@@ -10,17 +10,18 @@ from staticunderscorei18n.utils import get_filename
 from staticunderscorei18n.render import js_templates
 
 
-class Command(NoArgsCommand):
-    option_list = NoArgsCommand.option_list + (
-        make_option('--locale', '-l', dest='locale',
-                    help="The locale to process. Default is to process all."),
-        make_option('-o', '--output', dest='outputdir', metavar='OUTPUT_DIR',
-                    help="Output directory to store generated catalogs. "
-                         "Defaults to static/jsunderscorei18n.")
-    )
-    help = "Collect Javascript catalog files in a single location."
+class Command(BaseCommand):
+    def add_argument(self, parser):
+        parser.add_argument('--locale', '-l', dest='locale',
+                            help="The locale to process. Default is to process all."),
+        parser.add_argument('-o', '--output', dest='outputdir', metavar='OUTPUT_DIR',
+                            help="Output directory to store generated catalogs. "
+                                 "Defaults to static/jsunderscorei18n.")
 
-    def handle_noargs(self, **options):
+    help = "Collect Javascript catalog files in a single location."
+    requires_system_checks = False
+
+    def handle(self, **options):
         domain = settings.STATIC_UNDERSCORE_TEMPLATES_DOMAIN
         templates = settings.STATIC_UNDERSCORE_TEMPLATES
         locale = options.get('locale')
@@ -29,9 +30,11 @@ class Command(NoArgsCommand):
 
         if locale is not None:
             languages = [locale]
-        else:
+        elif django.VERSION < (1, 10):
             languages = [to_locale(lang_code)
                          for (lang_code, lang_name) in settings.LANGUAGES]
+        else:
+            languages = [lang_code for (lang_code, lang_name) in settings.LANGUAGES]
 
         if outputdir is None:
             outputdir = os.path.join(settings.STATIC_UNDERSCORE_I18N_ROOT,

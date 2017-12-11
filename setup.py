@@ -15,8 +15,8 @@ setup(
     include_package_data=True,
     zip_safe=False,
     install_requires=[
-        "Django>=1.4",
-        "django-appconf==1.0.2",
+        "Django>=1.8",
+        "django-appconf>=0.6",
     ],
     license="BSD",
     classifiers=[
