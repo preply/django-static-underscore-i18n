@@ -84,7 +84,14 @@ USE_L10N = True
 
 USE_TZ = True
 
-TEMPLATE_DIRS = (rel('templates/'), )
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'APP_DIRS': True,
+        'DIRS': rel('templates/'),
+    },
+]
+
 TEMPLATE_LOADERS = ('django.template.loaders.filesystem.Loader', 'django.template.loaders.app_directories.Loader')
 
 
@@ -96,6 +103,6 @@ STATIC_UNDERSCORE_I18N_ROOT = STATIC_ROOT
 STATIC_UNDERSCORE_I18N_OUTPUT_DIR = 'jsunderscorei18n'
 STATIC_UNDERSCORE_I18N_FILENAME_FUNCTION = 'staticunderscorei18n.utils.default_filename'
 STATIC_UNDERSCORE_TEMPLATES = {
-    'popup_variable': 'underscore/popup.html',
+    'popup_variable': os.path.join(rel('templates'), 'underscore/popup.html'),
 }
 STATIC_UNDERSCORE_TEMPLATES_DOMAIN = 'underscore_templates'
