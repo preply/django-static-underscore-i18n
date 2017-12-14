@@ -6,7 +6,7 @@ setup(
     author="Dmytro Voloshyn",
     author_email="dmytro@preply.com",
     url="http://django-static-underscore-i18n.readthedocs.org/",
-  	download_url = 'https://github.com/cubicova17/django-static-underscore-i18n/tarball/1.9',
+    download_url='https://github.com/cubicova17/django-static-underscore-i18n/tarball/1.9',
     description="A Django app that provides helper for generating "
                 "Javascript Underscore templates to static files with i18n support.",
     long_description=open('README.rst').read(),
@@ -15,8 +15,8 @@ setup(
     include_package_data=True,
     zip_safe=False,
     install_requires=[
-        "Django>=1.4",
-        "django-appconf>=0.4",
+        "Django>=1.8",
+        "django-appconf>=0.6",
     ],
     license="BSD",
     classifiers=[

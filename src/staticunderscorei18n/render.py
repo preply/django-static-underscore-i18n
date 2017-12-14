@@ -1,5 +1,4 @@
 from django.http import HttpRequest
-from django.template.context import RequestContext
 from django.template import loader
 from django import http
 from django.utils.html import escapejs
@@ -11,7 +10,7 @@ def js_templates(language, templates):
     activate(language)
     request = HttpRequest()
     request.LANGUAGE_CODE = language
-    context = RequestContext(request, {'LANGUAGE_CODE': language})
+    context = {'LANGUAGE_CODE': language}
     for (name, template) in templates.iteritems():
         template = loader.get_template(template_name=template)
         text = template.render(context)

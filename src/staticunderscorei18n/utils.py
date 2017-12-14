@@ -1,6 +1,6 @@
 import os
 
-from django.utils.importlib import import_module
+from importlib import import_module
 
 from staticunderscorei18n.conf import settings
 
