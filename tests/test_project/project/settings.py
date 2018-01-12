@@ -106,3 +106,9 @@ STATIC_UNDERSCORE_TEMPLATES = {
     'popup_variable': os.path.join(rel('templates'), 'underscore/popup.html'),
 }
 STATIC_UNDERSCORE_TEMPLATES_DOMAIN = 'underscore_templates'
+
+STATIC_UNDERSCORE_CONTEXT = {
+    'False': False,
+    'None': None,
+    'True': True,
+}

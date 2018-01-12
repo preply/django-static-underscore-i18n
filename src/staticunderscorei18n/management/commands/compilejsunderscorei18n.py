@@ -26,6 +26,7 @@ class Command(BaseCommand):
     def handle(self, **options):
         domain = settings.STATIC_UNDERSCORE_TEMPLATES_DOMAIN
         templates = settings.STATIC_UNDERSCORE_TEMPLATES
+        context = settings.STATIC_UNDERSCORE_CONTEXT
         locale = options.get('locale')
         outputdir = options.get('outputdir')
         verbosity = int(options.get('verbosity'))
@@ -50,6 +51,6 @@ class Command(BaseCommand):
             basedir = os.path.dirname(jsfile)
             if not os.path.isdir(basedir):
                 os.makedirs(basedir)
-            response = js_templates(locale, templates)
+            response = js_templates(locale, templates, context)
             with io.open(jsfile, "w", encoding="utf-8") as fp:
                 fp.write(force_text(response.content))

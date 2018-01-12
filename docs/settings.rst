@@ -43,6 +43,13 @@ Settings
 
     Controls the file path that catalog files will be written into.
 
+
+.. attribute:: STATIC_UNDERSCORE_CONTEXT
+
+    :default: ``{}``
+
+    Context to render _templates
+
 .. attribute:: STATICI_UNDERSCORE_I18N_OUTPUT_DIR
 
     :Default: ``'underscore_templates'``
