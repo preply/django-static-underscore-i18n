@@ -13,7 +13,7 @@ def js_templates(language, templates, context):
     context.update({
         'LANGUAGE_CODE': language
     })
-    for (name, template) in templates.iteritems():
+    for (name, template) in templates.items():
         template = loader.get_template(template_name=template)
         text = template.render(context)
         compiled_js += "underscore_vars['%s'] = '%s';\r\n" % (name, escapejs(text))
