@@ -16,7 +16,7 @@ class Command(BaseCommand):
     help = "Collect Javascript catalog files in a single location."
     requires_system_checks = False
 
-    def add_argument(self, parser):
+    def add_arguments(self, parser):
         parser.add_argument('--locale', '-l', dest='locale',
                             help="The locale to process. Default is to process all."),
         parser.add_argument('-o', '--output', dest='outputdir', metavar='OUTPUT_DIR',

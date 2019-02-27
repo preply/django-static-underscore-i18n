@@ -1,5 +1,4 @@
--r requirements.txt
-
+django-appconf
 cov-core==1.15.0
 coverage<4
 flake8==2.5.4
