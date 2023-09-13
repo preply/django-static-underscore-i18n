@@ -6,7 +6,7 @@ import os
 import django
 from django.core.management.base import BaseCommand
 from django.utils.translation import to_locale
-from django.utils.encoding import force_text
+from django.utils.encoding import force_str
 from staticunderscorei18n.conf import settings
 from staticunderscorei18n.utils import get_filename
 from staticunderscorei18n.render import js_templates
@@ -53,4 +53,4 @@ class Command(BaseCommand):
                 os.makedirs(basedir)
             response = js_templates(locale, templates, context)
             with io.open(jsfile, "w", encoding="utf-8") as fp:
-                fp.write(force_text(response.content))
+                fp.write(force_str(response.content))
