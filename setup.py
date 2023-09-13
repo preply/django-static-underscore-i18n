@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="django-static-underscore-i18n",
-    version="2.0.0",
+    version="2.0.1",
     author="Dmytro Voloshyn",
     author_email="dmytro@preply.com",
     url="http://django-static-underscore-i18n.readthedocs.org/",
