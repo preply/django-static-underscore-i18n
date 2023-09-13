@@ -14,7 +14,7 @@ from staticunderscorei18n.render import js_templates
 
 class Command(BaseCommand):
     help = "Collect Javascript catalog files in a single location."
-    requires_system_checks = False
+    requires_system_checks = []
 
     def add_arguments(self, parser):
         parser.add_argument('--locale', '-l', dest='locale',
